@@ -1,69 +1,38 @@
-from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
-import requests
+# سلام، من [نام شما] هستم 👋
 
-class SMSApp(App):
-    def send_sms(self, phone_number, message):
-            # تنظیمات مربوط به sms.ir
-                    SMS_IR_API_KEY = "YOUR_SMS_IR_API_KEY"
-                            SMS_IR_SECRET_KEY = "YOUR_SMS_IR_SECRET_KEY"
-                                    SMS_IR_LINE_NUMBER = "YOUR_SMS_IR_LINE_NUMBER"
+![Banner](https://media.giphy.com/media/l0HlKfPjEcVYqI5eA/giphy.gif)
 
-                                            url = "https://ws.sms.ir/api/MessageSend"
-                                                    headers = {
-                                                                "Content-Type": "application/json",
-                                                                            "x-sms-ir-secure-token": SMS_IR_API_KEY
-                                                                                    }
-                                                                                            payload = {
-                                                                                                        "LineNumber": SMS_IR_LINE_NUMBER,
-                                                                                                                    "MobileNo": phone_number,
-                                                                                                                                "Message": message
-                                                                                                                                        }
+## درباره من
 
-                                                                                                                                                response = requests.post(url, headers=headers, json=payload)
-                                                                                                                                                        if response.status_code != 200:
-                                                                                                                                                                    return "Failed to send SMS"
-                                                                                                                                                                            return "SMS sent successfully"
+- 🌱 در حال یادگیری: ![Learning](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=white)
+- 👯 آماده همکاری در: ![Collaboration](https://img.shields.io/badge/Open%20Source-61DAFB?style=flat&logo=github&logoColor=white)
+- 💬 بپرسید از من درباره: ![Ask Me About](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+- 📫 چطور با من تماس بگیرید: [![Email](https://img.shields.io/badge/Email-%40your_email-blue)](mailto:your_email@example.com)
 
-                                                                                                                                                                                def build(self):
-                                                                                                                                                                                        layout = BoxLayout(orientation="vertical")
-                                                                                                                                                                                                
-                                                                                                                                                                                                        self.phone_input = TextInput(multiline=False)
-                                                                                                                                                                                                                self.message_input = TextInput(multiline=True)
+## مهارت‌ها
 
-                                                                                                                                                                                                                        send_buttons_layout = BoxLayout(orientation="horizontal")
+- زبان‌های برنامه‌نویسی: 
+  - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+  - ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+  - ![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)
 
-                                                                                                                                                                                                                                for feature in range(1, 13):
-                                                                                                                                                                                                                                            feature_button = Button(text=f"Feature {feature}")
-                                                                                                                                                                                                                                                        feature_button.bind(on_press=self.on_send_sms)
-                                                                                                                                                                                                                                                                    send_buttons_layout.add_widget(feature_button)
+- فریم‌ورک‌ها و ابزارها:
+  - ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white)
+  - ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+  - ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
-                                                                                                                                                                                                                                                                            layout.add_widget(Label(text="Phone Number:"))
-                                                                                                                                                                                                                                                                                    layout.add_widget(self.phone_input)
-                                                                                                                                                                                                                                                                                            layout.add_widget(Label(text="Message:"))
-                                                                                                                                                                                                                                                                                                    layout.add_widget(self.message_input)
-                                                                                                                                                                                                                                                                                                            layout.add_widget(send_buttons_layout)
+## پروژه‌های برجسته
 
-                                                                                                                                                                                                                                                                                                                    self.report_label = Label(text="")
-                                                                                                                                                                                                                                                                                                                            layout.add_widget(self.report_label)
-                                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                            return layout
+1. [نام پروژه 1]
+   - توضیح کوتاه درباره پروژه
+   - [![Repo](https:le=flat&logo=githbadge/Repo-Project--Name-blue?style=flat&logo=gتاه درب(URL پروژه)
 
-                                                                                                                                                                                                                                                                                                                                                def on_send_sms(self, instance):
-                                                                                                                                                                                                                                                                                                                                                        phone_number = self.phone_input.text.strip()
-                                                                                                                                                                                                                                                                                                                                                                message = self.message_input.text.strip()
-                                                                                                                                                                                                                                                                                                                                                                        feature = instance.text.split()[1]
+2. [نام پروژه 2]
+   - توضیح کوتاه درباره پروژه
+   - [![Repo](https://img.shiolds.io/ub)](URLimg.shields لینک‌های مرتبط
 
-                                                                                                                                                                                                                                                                                                                                                                                if not phone_number or not message:
-                                                                                                                                                                                                                                                                                                                                                                                            self.report_label.text = "Phone number and message are required"
-                                                                                                                                                                                                                                                                                                                                                                                                        return
+- [![Websitestyleps://img.shields.io/badge/WRL وبس-Visit-blue?style=flat&logo=googlechrome)]/badge/LinkedIn-Connect-bn](httple=flat&logo=linkedin)](URinkedIn-Connect-blue?style=flat&logo=linkedin)](URinkedIn-Connect-blue?style=fps://ogo.shields.io/badge/Twitter-Follow-blue?style=flat&logo=tlds.io/badge/Twitter-Follow-blue?style=flat&logo=twitter)](URL توییتر)
 
-                                                                                                                                                                                                                                                                                                                                                                                                                result = self.send_sms(phone_number, message)
-                                                                                                                                                                                                                                                                                                                                                                                                                        self.report_label.text = f"Feature {feature}: {result}"
+---
 
-
-                                                                                                                                                                                                                                                                                                                                                                                                                        if __name__ == "__main__":
-                                                                                                                                                                                                                                                                                                                                                                                                                            SMSApp().run()
+**آخرین بروزرسانی:** [تاریخ بروزرسانی]
